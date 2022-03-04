@@ -22,4 +22,3 @@ for f in *.mp4; do echo "file $f" >> fileList.txt; done
 ffmpeg -f concat -i fileList.txt final.mp4
 
 python2 upload_video.py --file="~/blur/final.mp4" --title="TikTok Trending Videos Compilation" --description="Had fun surfing in Santa Cruz" --keywords="TikTok,Trending,tiktok compilation" --category="22" --privacyStatus="public"
-
