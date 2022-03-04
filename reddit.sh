@@ -1,4 +1,5 @@
 #!/bin/bash
+
 youtube-dl $(curl -s -H "User-agent: 'your bot 0.1'" https://www.reddit.com/r/TikTokCringe/top.json\?limit\=12 | jq '.' | grep url_overridden_by_dest | grep -Eoh "https:\/\/v\.redd\.it/\w{13}"
 for f in *.mp4; do echo $f; done)
 
